@@ -1,385 +1,385 @@
 /* General Styles */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .section-container {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 .section {
-    padding: 60px 0; /* Increased padding for sections */
+  padding: 60px 0; /* Increased padding for sections */
 }
 
 h2 {
-    color: #38761d; /* Green color */
-    text-align: center;
-    margin-bottom: 30px;
+  color: #38761d; /* Green color */
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* Header Styles */
 header {
-    background-color: #fff;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
 
 .header-container {
-    display: flex;
-    justify-content: flex-start; /* Ensure logo is visible */
-    align-items: center;
+  display: flex;
+  justify-content: flex-start; /* Ensure logo is visible */
+  align-items: center;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo-container img {
-    height: 50px;
-    margin-right: 15px;
-    display: block;
+  height: 50px;
+  margin-right: 15px;
+  display: block;
 }
 
 .logo-container h1 {
-    color: #38761d; /* Green color */
-    margin: 0;
+  color: #38761d; /* Green color */
+  margin: 0;
 }
 
 /* Navigation Styles */
 nav {
-    background-color: #38761d; /* Green color */
-    color: #fff;
-    padding: 15px 0;
+  background-color: #38761d; /* Green color */
+  color: #fff;
+  padding: 15px 0;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #228b22; /* Darker green */
+  background-color: #228b22; /* Darker green */
 }
 
 /* Home Section Styles */
 #home {
-    background-color: #e9f5db; /* Light green background */
+  background-color: #e9f5db; /* Light green background */
 }
 
 .home-content {
-    text-align: center;
+  text-align: center;
 }
 
 .home-intro {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 800px;
-    margin: 20px auto 0;
+  font-size: 1.1em;
+  color: #555;
+  max-width: 800px;
+  margin: 20px auto 0;
 }
 
 /* Products Section Styles */
 #products {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .products-content {
-    /* No specific styling needed here yet */
+  /* No specific styling needed here yet */
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
-    gap: 30px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox for content alignment */
-    flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox for content alignment */
+  flex-direction: column;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 1px solid #eee;
-    object-fit: cover;
-    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio for consistent image proportions */
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio for consistent image proportions */
 }
 
 .card h3 {
-    color: #38761d; /* Green color */
-    margin: 15px;
-    text-align: center;
-    white-space: nowrap; /* Prevent plant name wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for long names */
+  color: #38761d; /* Green color */
+  margin: 15px;
+  text-align: center;
+  white-space: nowrap; /* Prevent plant name wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long names */
 }
 
 .card p {
-    color: #555;
-    font-size: 0.95em;
-    padding: 0 15px 15px;
-    text-align: center;
-    flex-grow: 1; /* Allow paragraph to take up remaining space */
+  color: #555;
+  font-size: 0.95em;
+  padding: 0 15px 15px;
+  text-align: center;
+  flex-grow: 1; /* Allow paragraph to take up remaining space */
 }
 
 /* Guidance Section Styles */
 #guidance {
-    background-color: #f0fff0; /* Light green background */
+  background-color: #f0fff0; /* Light green background */
 }
 
 .guidance-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .guidance-content ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
 
 .guidance-content li {
-    padding: 12px 0; /* Slightly increased padding */
-    border-bottom: 1px dashed #ccc;
-    color: #444;
+  padding: 12px 0; /* Slightly increased padding */
+  border-bottom: 1px dashed #ccc;
+  color: #444;
 }
 
 .guidance-content li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .guidance-content strong {
-    color: #228b22; /* Darker green */
+  color: #228b22; /* Darker green */
 }
 
 /* Team Section Styles */
 #team {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .team-content {
-    /* No specific styling needed here yet */
+  /* No specific styling needed here yet */
 }
 
 .team-grid {
-    display: flex; /* Change to flexbox */
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    gap: 20px; /* Adjust the gap as needed */
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    margin-top: 20px;
+  display: flex; /* Change to flexbox */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  gap: 20px; /* Adjust the gap as needed */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  margin-top: 20px;
 }
 
 .team-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    flex: 0 0 auto; /* Don't grow or shrink, base width auto */
-    width: 200px; /* Adjust the base width as needed */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  flex: 0 0 auto; /* Don't grow or shrink, base width auto */
+  width: 200px; /* Adjust the base width as needed */
 }
 
 .team-card img {
-    width: 100px; /* Adjust image size as needed */
-    height: 100px; /* Adjust image size as needed */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+  width: 100px; /* Adjust image size as needed */
+  height: 100px; /* Adjust image size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .team-card h3 {
-    color: #38761d; /* Green color */
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-    white-space: nowrap; /* Prevent name from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for long names */
+  color: #38761d; /* Green color */
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  white-space: nowrap; /* Prevent name from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long names */
 }
 
 .team-card p {
-    color: #555;
-    font-size: 0.9em;
-    margin-bottom: 0;
-    white-space: nowrap; /* Prevent role from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis for long roles */
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 0;
+  white-space: nowrap; /* Prevent role from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long roles */
 }
 
 /* Contact Section Styles */
 #contact {
-    background-color: #e9f5db; /* Light green background */
-    padding-bottom: 70px; /* Slightly more bottom padding */
+  background-color: #e9f5db; /* Light green background */
+  padding-bottom: 70px; /* Slightly more bottom padding */
 }
 
 .contact-content {
-    max-width: 600px; /* Slightly wider form container */
-    margin: 30px auto 0; /* More top margin */
-    padding: 35px; /* Increased padding */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
-    display: flex;
-    flex-direction: column;
-    gap: 25px; /* Increased gap between form groups */
+  max-width: 600px; /* Slightly wider form container */
+  margin: 30px auto 0; /* More top margin */
+  padding: 35px; /* Increased padding */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased gap between form groups */
 }
 
 .contact-intro {
-    color: #555;
-    text-align: center;
-    margin-bottom: 25px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #444;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="text"][id="subject"], /* Specificity for subject input */
 .form-group textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
 }
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .submit-button {
-    background-color: #38761d; /* Green color */
-    color: #fff;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
+  background-color: #38761d; /* Green color */
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: #228b22; /* Darker green */
+  background-color: #228b22; /* Darker green */
 }
 
 #form-response {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 #form-response.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 #form-response.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 25px 0; /* Increased padding for the footer */
-    font-size: 0.9em;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0; /* Increased padding for the footer */
+  font-size: 0.9em;
 }
 
 .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px; /* Increased gap in footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* Increased gap in footer */
 }
 
 footer a {
-    color: #fff;
-    text-decoration: underline;
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  .nav-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
 
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
-    }
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
+  }
 
-    .team-grid {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        overflow-x: auto; /* Still keep horizontal scroll if needed */
-        justify-content: center; /* Center team cards on smaller screens */
-    }
+  .team-grid {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      overflow-x: auto; /* Still keep horizontal scroll if needed */
+      justify-content: center; /* Center team cards on smaller screens */
+  }
 
-    .team-card {
-        width: calc(50% - 10px); /* Two cards per row on smaller screens */
-        margin-bottom: 15px;
-    }
+  .team-card {
+      width: calc(50% - 10px); /* Two cards per row on smaller screens */
+      margin-bottom: 15px;
+  }
 
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
 
-    .logo-container {
-        margin-bottom: 10px;
-    }
+  .logo-container {
+      margin-bottom: 10px;
+  }
 
-    .contact-content {
-        padding: 20px; /* Adjust form padding for smaller screens */
-    }
+  .contact-content {
+      padding: 20px; /* Adjust form padding for smaller screens */
+  }
 }
 
 @media (max-width: 500px) {
-    .team-card {
-        width: 100%; /* One card per row on even smaller screens */
-    }
+  .team-card {
+      width: 100%; /* One card per row on even smaller screens */
+  }
 }
