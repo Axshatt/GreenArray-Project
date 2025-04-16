@@ -137,6 +137,9 @@ nav a:hover {
     color: #38761d; /* Green color */
     margin: 15px;
     text-align: center;
+    white-space: nowrap; /* Prevent plant name wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long names */
 }
 
 .card p {
@@ -187,9 +190,10 @@ nav a:hover {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly wider team cards */
-    gap: 25px;
+    display: flex; /* Change to flexbox */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    gap: 20px; /* Adjust the gap as needed */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
     margin-top: 20px;
 }
 
@@ -201,11 +205,13 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 20px;
+    flex: 0 0 auto; /* Don't grow or shrink, base width auto */
+    width: 200px; /* Adjust the base width as needed */
 }
 
 .team-card img {
-    width: 120px; /* Increased width */
-    height: 120px; /* Increased height */
+    width: 100px; /* Adjust image size as needed */
+    height: 100px; /* Adjust image size as needed */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -216,12 +222,18 @@ nav a:hover {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 1.2em;
+    white-space: nowrap; /* Prevent name from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long names */
 }
 
 .team-card p {
     color: #555;
     font-size: 0.9em;
     margin-bottom: 0;
+    white-space: nowrap; /* Prevent role from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long roles */
 }
 
 /* Contact Section Styles */
@@ -261,6 +273,7 @@ nav a:hover {
 
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="text"][id="subject"], /* Specificity for subject input */
 .form-group textarea {
     padding: 12px;
     border: 1px solid #ccc;
@@ -335,9 +348,19 @@ footer a {
         gap: 10px;
     }
 
-    .product-grid,
-    .team-grid {
+    .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
+    }
+
+    .team-grid {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        overflow-x: auto; /* Still keep horizontal scroll if needed */
+        justify-content: center; /* Center team cards on smaller screens */
+    }
+
+    .team-card {
+        width: calc(50% - 10px); /* Two cards per row on smaller screens */
+        margin-bottom: 15px;
     }
 
     .header-container {
@@ -352,5 +375,11 @@ footer a {
 
     .contact-content {
         padding: 20px; /* Adjust form padding for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .team-card {
+        width: 100%; /* One card per row on even smaller screens */
     }
 }
