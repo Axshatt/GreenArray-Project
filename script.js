@@ -1,52 +1,48 @@
-// Wait for the DOM to fully load
-document.addEventListener('DOMContentLoaded', () => {
-  // Select all team member cards
-  const teamCards = document.querySelectorAll('.team-card');
-  // Select modal elements
-  const modal = document.getElementById('teamModal');
-  const modalImage = document.getElementById('modalImage');
-  const modalName = document.getElementById('modalName');
-  const modalRole = document.getElementById('modalRole');
-  const closeModal = document.querySelector('.close');
-
-  // Function to open the modal with the selected team member's details
-  const openModal = (card) => {
-    const name = card.getAttribute('data-name');
-    const role = card.getAttribute('data-role');
-    const imageSrc = card.getAttribute('data-image');
-
-    modalName.textContent = name;
-    modalRole.textContent = role;
-    modalImage.src = imageSrc;
-    modalImage.alt = name;
-
-    modal.style.display = 'block';
-  };
-
-  // Function to close the modal
-  const closeModalFunction = () => {
-    modal.style.display = 'none';
-  };
-
-  // Add click event listeners to each team card
-  teamCards.forEach(card => {
-    card.addEventListener('click', () => openModal(card));
-  });
-
-  // Add click event listener to the close button
-  closeModal.addEventListener('click', closeModalFunction);
-
-  // Add click event listener to close the modal when clicking outside the modal content
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      closeModalFunction();
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   });
+});
 
-  // Add keydown event listener to close the modal when pressing the Escape key
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal.style.display === 'block') {
-      closeModalFunction();
-    }
-  });
+// Form Validation
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.querySelector('input[type="text"]');
+  const email = document.querySelector('input[type="email"]');
+  const message = document.querySelector('textarea');
+  let isValid = true;
+
+  // Validate Name
+  if (!name.value.trim()) {
+    alert('Please enter your name.');
+    name.focus();
+    isValid = false;
+  }
+
+  // Validate Email
+  else if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) {
+    alert('Please enter a valid email address.');
+    email.focus();
+    isValid = false;
+  }
+
+  // Validate Message
+  else if (!message.value.trim()) {
+    alert('Please enter your message.');
+    message.focus();
+    isValid = false;
+  }
+
+  // If all fields are valid, submit the form
+  if (isValid) {
+    alert('Thank you for your message!');
+    this.reset();
+  }
 });
