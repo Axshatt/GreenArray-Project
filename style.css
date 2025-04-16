@@ -1,98 +1,200 @@
-body {
+/* Reset some default styles */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0fff4;
-  color: #1b5e20;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Set body styles */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section */
 header {
-  background-color: #2e7d32;
+  background-color: #2e8b57;
   color: white;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  padding: 20px 0;
 }
 
-header img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: #43a047;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+header h1 {
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
-section {
-  padding: 20px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: #e8f5e9;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-form {
+/* Navigation */
+nav ul {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px 0;
 }
 
-input, textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+nav ul li {
+  margin: 0 15px;
 }
 
-button {
-  padding: 10px;
-  background-color: #2e7d32;
+nav ul li a {
   color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #dcdcdc;
+}
+
+/* Section styles */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2e8b57;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Image shop styles */
+.image-shop {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.shop-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.shop-item {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.shop-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.shop-item img:hover {
+  transform: scale(1.05);
+}
+
+.shop-item p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Guidance section */
+.guidance {
+  background-color: #e7f7e7;
+  padding: 40px 20px;
+}
+
+.guidance p {
+  font-size: 1.2rem;
+}
+
+/* Helpline section */
+.helplines {
+  background-color: #d9f2d9;
+  padding: 40px 20px;
+}
+
+.helplines p {
+  font-size: 1.2rem;
+}
+
+/* Contact form styles */
+.contact-form {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
+.contact-form button:hover {
+  background-color: #245f40;
+}
+
+.contact-form p {
+  font-size: 1.1rem;
+  color: green;
+}
+
+/* Footer styles */
 footer {
-  background-color: #2e7d32;
+  background-color: #2e8b57;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
+  font-size: 1rem;
 }
 
-a {
-  color: white;
+footer p {
+  margin: 5px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .shop-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .shop-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
 }
