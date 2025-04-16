@@ -34,7 +34,7 @@
         <section id="home" class="section">
             <div class="container section-container home-content">
                 <h2>Welcome to GreenArray</h2>
-                <p>Your one-stop solution for indoor/outdoor plants, gardening essentials, seeds, and expert care tips. We believe in creating greener homes and a sustainable future.</p>
+                <p class="home-intro">Your one-stop solution for indoor/outdoor plants, gardening essentials, seeds, and expert care tips. We believe in creating greener homes and a sustainable future.</p>
             </div>
         </section>
 
@@ -42,16 +42,6 @@
             <div class="container section-container products-content">
                 <h2>Top 5 Plants</h2>
                 <div class="product-grid">
-                    <div class="card">
-                        <img src="monestra.webp" alt="Monstera - Air-purifying, beautiful split leaves. Great for indoors.">
-                        <h3>Monstera</h3>
-                        <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
-                    </div>
-                    <div class="card">
-                        <img src="japanesemapple.webp" alt="Japanese Maple - Stunning red foliage. Prefers partial sunlight.">
-                        <h3>Japanese Maple</h3>
-                        <p>Stunning red foliage. Prefers partial sunlight.</p>
-                    </div>
                     <div class="card">
                         <img src="birdofparadise.jpeg" alt="Bird of Paradise - Bright tropical flower. Needs good sunlight.">
                         <h3>Bird of Paradise</h3>
@@ -67,6 +57,16 @@
                         <h3>Guaiacum</h3>
                         <p>Rare medicinal plant with unique leaf structure.</p>
                     </div>
+                    <div class="card">
+                        <img src="japanesemapple.webp" alt="Japanese Maple - Stunning red foliage. Prefers partial sunlight.">
+                        <h3>Japanese Maple</h3>
+                        <p>Stunning red foliage. Prefers partial sunlight.</p>
+                    </div>
+                    <div class="card">
+                        <img src="monestra.webp" alt="Monstera - Air-purifying, beautiful split leaves. Great for indoors.">
+                        <h3>Monstera</h3>
+                        <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -75,12 +75,14 @@
             <div class="container section-container guidance-content">
                 <h2>Plant Care Guidance</h2>
                 <ul>
-                    <li>🌿 <strong>Watering</strong>: Check soil before watering. Water once a week.</li>
-                    <li>☀️ <strong>Sunlight</strong>: Indoor plants need indirect light. Outdoor plants need full sun.</li>
-                    <li>🌱 <strong>Soil</strong>: Use well-draining soil. Choose the correct mix.</li>
-                    <li>🐛 <strong>Pest Control</strong>: Use neem oil or soap solution for pests.</li>
-                    <li>🌼 <strong>Fertilizing</strong>: Apply organic fertilizers in summer, avoid in winter.</li>
-                    <li>♻️ <strong>Repotting</strong>: Every 6-12 months with fresh soil.</li>
+                    <li>🌿 <strong>Watering</strong>: Check soil moisture before watering. Water thoroughly when the top inch of soil feels dry. Avoid overwatering.</li>
+                    <li>☀️ <strong>Sunlight</strong>: Understand your plant's light needs (full sun, partial shade, indirect light) and place it accordingly. Observe how your plant reacts and adjust if necessary.</li>
+                    <li>🌱 <strong>Soil</strong>: Use a well-draining potting mix appropriate for your plant type. Different plants have different soil preferences.</li>
+                    <li>🐛 <strong>Pest Control</strong>: Regularly inspect your plants for pests. Isolate affected plants and treat with neem oil, insecticidal soap, or other appropriate methods. Early detection is key.</li>
+                    <li>🌼 <strong>Fertilizing</strong>: Feed your plants during their growing season (usually spring and summer) with a balanced liquid fertilizer diluted to the recommended strength. Avoid fertilizing in winter when growth slows down.</li>
+                    <li>♻️ <strong>Repotting</strong>: Repot your plant when it outgrows its current container (roots circling the pot, drying out quickly). Choose a pot that is only slightly larger. Use fresh potting mix.</li>
+                    <li>🌡️ <strong>Temperature & Humidity</strong>: Be mindful of your plant's preferred temperature range and humidity levels. Most houseplants prefer average room temperatures. Some may benefit from increased humidity, especially in dry environments.</li>
+                    <li>🪴 <strong>Pruning</strong>: Prune dead or yellowing leaves and stems to encourage healthy growth and maintain the plant's appearance. Some plants benefit from more significant pruning to shape them or encourage bushier growth.</li>
                 </ul>
             </div>
         </section>
@@ -116,13 +118,27 @@
         <section id="contact" class="section">
             <div class="container section-container contact-content">
                 <h2>Contact Us</h2>
+                <p class="contact-intro">Have questions, suggestions, or need assistance? Feel free to reach out to us by filling out the form below.</p>
                 <form id="contactForm">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" required />
-                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" placeholder="Enter your message here" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <div id="form-response" style="margin-top: 15px; text-align: center; display: none;"></div>
                 </form>
-                <div id="form-response" style="margin-top: 10px; text-align: center; display: none;"></div>
             </div>
         </section>
     </main>
