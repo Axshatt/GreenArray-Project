@@ -2,49 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GreenArray</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenArray - Eco-Friendly Gardening Platform</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Plants</a>
-    <a href="#guidance">Guidance</a>
-    <a href="#team">Meet Our Team</a>
-    <a href="#contact">Contact</a>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#plants">Plants</a></li>
+      <li><a href="#guidance">Guidance</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
   </nav>
 
-  <!-- Team Section -->
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to GreenArray</h1>
+    <p>Your eco-friendly gardening companion.</p>
+  </section>
+
+  <!-- Plants Section -->
+  <section id="plants">
+    <h2>Our Plant Collection</h2>
+    <p>Explore our diverse range of rare and exotic plants.</p>
+  </section>
+
+  <!-- Guidance Section -->
+  <section id="guidance">
+    <h2>Gardening Guidance</h2>
+    <p>Expert tips and techniques for plant care.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About GreenArray</h2>
+    <p>Promoting eco-conscious gardening practices.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Meet Our Team Section -->
   <section id="team">
     <h2>Meet Our Team</h2>
     <div class="team-grid">
-      <div class="team-card" data-name="Vinayak Pandey" data-role="Team Lead & Full Stack Developer" data-image="vinayak.jpg">
-        <img src="vinayak.jpg" alt="Vinayak Pandey">
+      <div class="team-card" data-name="Vinayak Pandey" data-role="Team Lead & Full Stack Developer" data-image="frontend/birdofparadise.jpeg">
+        <img src="frontend/birdofparadise.jpeg" alt="Vinayak Pandey">
         <h3>Vinayak Pandey</h3>
         <p>Team Lead & Full Stack Developer</p>
       </div>
-      <div class="team-card" data-name="Soumya Mishra" data-role="React Developer & UI Specialist" data-image="soumya.jpg">
-        <img src="soumya.jpg" alt="Soumya Mishra">
+      <div class="team-card" data-name="Soumya Mishra" data-role="React Integration & UI Improvements" data-image="frontend/fiddleleaf.jpeg">
+        <img src="frontend/fiddleleaf.jpeg" alt="Soumya Mishra">
         <h3>Soumya Mishra</h3>
-        <p>React Developer & UI Specialist</p>
+        <p>React Integration & UI Improvements</p>
       </div>
-      <div class="team-card" data-name="Srishti Dwivedi" data-role="Hackathon Post & Video Editor" data-image="srishti.jpg">
-        <img src="srishti.jpg" alt="Srishti Dwivedi">
+      <div class="team-card" data-name="Srishti Dwivedi" data-role="Hackathon Post & Media Presentation" data-image="frontend/japanesemapple.webp">
+        <img src="frontend/japanesemapple.webp" alt="Srishti Dwivedi">
         <h3>Srishti Dwivedi</h3>
-        <p>Hackathon Post & Video Editor</p>
+        <p>Hackathon Post & Media Presentation</p>
       </div>
-      <div class="team-card" data-name="Vibhanshu Mishra" data-role="Front-End Developer" data-image="vibhanshu.jpg">
-        <img src="vibhanshu.jpg" alt="Vibhanshu Mishra">
+      <div class="team-card" data-name="Vibhanshu Mishra" data-role="Front-End Developer" data-image="frontend/monestra.webp">
+        <img src="frontend/monestra.webp" alt="Vibhanshu Mishra">
         <h3>Vibhanshu Mishra</h3>
         <p>Front-End Developer</p>
       </div>
     </div>
   </section>
 
-  <!-- Modal Structure -->
+  <!-- Team Member Modal -->
   <div id="teamModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -54,6 +97,7 @@
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
