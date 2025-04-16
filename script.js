@@ -1,48 +1,29 @@
-// Smooth Scrolling for Navigation Links
+// script.js
+
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-// Form Validation
-document.querySelector('form').addEventListener('submit', function(e) {
-  e.preventDefault();
+// Basic form submission handling (for demonstration - doesn't actually send data)
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Your message has been sent! (This is a demo)');
+        this.reset(); // Clear the form after "submission"
+    });
+}
 
-  const name = document.querySelector('input[type="text"]');
-  const email = document.querySelector('input[type="email"]');
-  const message = document.querySelector('textarea');
-  let isValid = true;
-
-  // Validate Name
-  if (!name.value.trim()) {
-    alert('Please enter your name.');
-    name.focus();
-    isValid = false;
-  }
-
-  // Validate Email
-  else if (!email.value.trim() || !/\S+@\S+\.\S+/.test(email.value)) {
-    alert('Please enter a valid email address.');
-    email.focus();
-    isValid = false;
-  }
-
-  // Validate Message
-  else if (!message.value.trim()) {
-    alert('Please enter your message.');
-    message.focus();
-    isValid = false;
-  }
-
-  // If all fields are valid, submit the form
-  if (isValid) {
-    alert('Thank you for your message!');
-    this.reset();
-  }
-});
+// You can add more JavaScript functionality here, such as:
+// - Image carousels for the products section
+// - Dynamic loading of plant data
+// - Interactive plant care guides
+// - Form validation
+// - More complex UI interactions
