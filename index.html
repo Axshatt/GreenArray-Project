@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GreenArray - Gardening Platform</title>
+  <title>GreenArray</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <div class="logo-container">
-   <img src="logo.jpg" alt="GreenArray Logo">
-
+      <img src="logo.jpg" alt="GreenArray Logo">
       <h1>GreenArray</h1>
     </div>
   </header>
@@ -32,27 +31,27 @@
     <h2>Top 5 Plants</h2>
     <div class="product-grid">
       <div class="card">
-        <img src="monestra.webp" alt="Monstera" />
+        <img src="monestra.webp" alt="Monstera">
         <h3>Monstera</h3>
         <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
       </div>
       <div class="card">
-        <img src="japanesemapple.webp" alt="Japanese Maple" />
+        <img src="japanesemapple.webp" alt="Japanese Maple">
         <h3>Japanese Maple</h3>
         <p>Stunning red foliage. Prefers partial sunlight.</p>
       </div>
       <div class="card">
-        <img src="birdofparadise.jpeg" alt="Bird of Paradise" />
+        <img src="birdofparadise.jpeg" alt="Bird of Paradise">
         <h3>Bird of Paradise</h3>
         <p>Bright tropical flower. Needs good sunlight.</p>
       </div>
       <div class="card">
-        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig" />
+        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig">
         <h3>Fiddle Leaf Fig</h3>
         <p>Modern houseplant. Requires weekly watering.</p>
       </div>
       <div class="card">
-        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum" />
+        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum">
         <h3>Guaiacum</h3>
         <p>Rare medicinal plant with unique leaf structure.</p>
       </div>
@@ -61,22 +60,26 @@
 
   <section id="guidance">
     <h2>Plant Care Guidance</h2>
-    <ul>
-      <li>🌿 <strong>Watering:</strong> Check soil before watering. Water once a week.</li>
-      <li>☀️ <strong>Sunlight:</strong> Indoor plants need indirect light. Outdoor plants need full sun.</li>
-      <li>🌱 <strong>Soil:</strong> Use well-draining soil. Choose correct mix.</li>
-      <li>🐛 <strong>Pest Control:</strong> Use neem oil or soap solution for pests.</li>
-      <li>🌼 <strong>Fertilizing:</strong> Apply organic fertilizers in summer, avoid in winter.</li>
-      <li>♻️ <strong>Repotting:</strong> Every 6–12 months with fresh soil.</li>
-    </ul>
+    <p>🌿 <strong>Watering</strong>: Check soil before watering. Water once a week.</p>
+    <p>☀️ <strong>Sunlight</strong>: Indoor plants need indirect light. Outdoor plants need full sun.</p>
+    <p>🌱 <strong>Soil</strong>: Use well-draining soil. Choose correct mix.</p>
+    <p>🐛 <strong>Pest Control</strong>: Use neem oil or soap solution for pests.</p>
+    <p>🌼 <strong>Fertilizing</strong>: Apply organic fertilizers in summer, avoid in winter.</p>
+    <p>♻️ <strong>Repotting</strong>: Every 6-12 months with fresh soil.</p>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="4" required></textarea>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -86,6 +89,5 @@
     <p>📧 Email: <a href="mailto:greenarray2627@gmail.com">greenarray2627@gmail.com</a></p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
