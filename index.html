@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GreenArray</title>
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style.css" />
     <meta name="description" content="GreenArray: Your source for indoor/outdoor plants, gardening essentials, and expert care tips.">
     <meta name="keywords" content="plants, gardening, indoor plants, outdoor plants, plant care, seeds">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -31,39 +31,39 @@
     </nav>
 
     <main>
-        <section id="home">
-            <div class="container section-container">
+        <section id="home" class="section">
+            <div class="container section-container home-content">
                 <h2>Welcome to GreenArray</h2>
                 <p>Your one-stop solution for indoor/outdoor plants, gardening essentials, seeds, and expert care tips. We believe in creating greener homes and a sustainable future.</p>
             </div>
         </section>
 
-        <section id="products">
-            <div class="container section-container">
+        <section id="products" class="section">
+            <div class="container section-container products-content">
                 <h2>Top 5 Plants</h2>
                 <div class="product-grid">
                     <div class="card">
-                        <img src="monestra.webp" alt="Monstera">
+                        <img src="monestra.webp" alt="Monstera - Air-purifying, beautiful split leaves. Great for indoors.">
                         <h3>Monstera</h3>
                         <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
                     </div>
                     <div class="card">
-                        <img src="japanesemapple.webp" alt="Japanese Maple">
+                        <img src="japanesemapple.webp" alt="Japanese Maple - Stunning red foliage. Prefers partial sunlight.">
                         <h3>Japanese Maple</h3>
                         <p>Stunning red foliage. Prefers partial sunlight.</p>
                     </div>
                     <div class="card">
-                        <img src="birdofparadise.jpeg" alt="Bird of Paradise">
+                        <img src="birdofparadise.jpeg" alt="Bird of Paradise - Bright tropical flower. Needs good sunlight.">
                         <h3>Bird of Paradise</h3>
                         <p>Bright tropical flower. Needs good sunlight.</p>
                     </div>
                     <div class="card">
-                        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig">
+                        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig - Modern houseplant. Requires weekly watering.">
                         <h3>Fiddle Leaf Fig</h3>
                         <p>Modern houseplant. Requires weekly watering.</p>
                     </div>
                     <div class="card">
-                        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum">
+                        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum - Rare medicinal plant with unique leaf structure.">
                         <h3>Guaiacum</h3>
                         <p>Rare medicinal plant with unique leaf structure.</p>
                     </div>
@@ -71,8 +71,8 @@
             </div>
         </section>
 
-        <section id="guidance">
-            <div class="container section-container">
+        <section id="guidance" class="section">
+            <div class="container section-container guidance-content">
                 <h2>Plant Care Guidance</h2>
                 <ul>
                     <li>🌿 <strong>Watering</strong>: Check soil before watering. Water once a week.</li>
@@ -85,27 +85,27 @@
             </div>
         </section>
 
-        <section id="team">
-            <div class="container section-container">
+        <section id="team" class="section">
+            <div class="container section-container team-content">
                 <h2>Meet Our Team</h2>
                 <div class="team-grid">
                     <div class="team-card">
-                        <img src="vinayak.jpg" alt="Vinayak Pandey">
+                        <img src="vinayak.jpg" alt="Vinayak Pandey - Team Lead and Full Stack Developer">
                         <h3>Vinayak Pandey</h3>
                         <p>Team Lead and Full Stack Developer</p>
                     </div>
                     <div class="team-card">
-                        <img src="team_member2.jpg" alt="Soumya Mishra">
+                        <img src="team_member2.jpg" alt="Soumya Mishra - React Integration and UI Improvements">
                         <h3>Soumya Mishra</h3>
                         <p>React Integration and UI Improvements</p>
                     </div>
                     <div class="team-card">
-                        <img src="team_member3.jpg" alt="Sristhi Dwivedi">
+                        <img src="team_member3.jpg" alt="Sristhi Dwivedi - Hackathons Post and Media Presentation">
                         <h3>Sristhi Dwivedi</h3>
                         <p>Hackathons Post and Media Presentation</p>
                     </div>
                     <div class="team-card">
-                        <img src="team_member4.jpg" alt="Vibhanshu Mishra">
+                        <img src="team_member4.jpg" alt="Vibhanshu Mishra - Front end Developer">
                         <h3>Vibhanshu Mishra</h3>
                         <p>Front end Developer</p>
                     </div>
@@ -113,15 +113,16 @@
             </div>
         </section>
 
-        <section id="contact">
-            <div class="container section-container">
+        <section id="contact" class="section">
+            <div class="container section-container contact-content">
                 <h2>Contact Us</h2>
-                <form>
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <div id="form-response" style="margin-top: 10px; text-align: center; display: none;"></div>
             </div>
         </section>
     </main>
