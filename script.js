@@ -11,13 +11,36 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Basic form submission handling (for demonstration - doesn't actually send data)
-const contactForm = document.querySelector('#contact form');
-if (contactForm) {
+// Basic form submission handling with visual feedback
+const contactForm = document.getElementById('contactForm');
+const formResponseDiv = document.getElementById('form-response');
+
+if (contactForm && formResponseDiv) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        alert('Your message has been sent! (This is a demo)');
-        this.reset(); // Clear the form after "submission"
+
+        // Simulate form submission (replace with actual API call if needed)
+        setTimeout(() => {
+            const isSuccess = Math.random() < 0.8; // Simulate success 80% of the time
+
+            if (isSuccess) {
+                formResponseDiv.textContent = 'Your message has been sent successfully!';
+                formResponseDiv.className = 'success';
+                contactForm.reset();
+            } else {
+                formResponseDiv.textContent = 'Oops! Something went wrong. Please try again later.';
+                formResponseDiv.className = 'error';
+            }
+
+            formResponseDiv.style.display = 'block';
+
+            // Hide the response message after a few seconds
+            setTimeout(() => {
+                formResponseDiv.style.display = 'none';
+                formResponseDiv.className = ''; // Reset class
+                formResponseDiv.textContent = ''; // Clear text
+            }, 5000);
+        }, 1000); // Simulate a 1-second delay for submission
     });
 }
 
