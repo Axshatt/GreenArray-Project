@@ -1,288 +1,339 @@
 /* General Styles */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-container {
-  padding: 40px 0;
+    padding: 40px 0;
+}
+
+.section {
+    padding: 60px 0; /* Increased padding for sections */
 }
 
 h2 {
-  color: #38761d; /* Green color */
-  text-align: center;
-  margin-bottom: 30px;
+    color: #38761d; /* Green color */
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 /* Header Styles */
 header {
-  background-color: #fff;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start; /* Ensure logo is visible */
+    align-items: center;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container img {
-  height: 50px;
-  margin-right: 15px;
+    height: 50px;
+    margin-right: 15px;
+    display: block;
 }
 
 .logo-container h1 {
-  color: #38761d; /* Green color */
-  margin: 0;
+    color: #38761d; /* Green color */
+    margin: 0;
 }
 
 /* Navigation Styles */
 nav {
-  background-color: #38761d; /* Green color */
-  color: #fff;
-  padding: 15px 0;
+    background-color: #38761d; /* Green color */
+    color: #fff;
+    padding: 15px 0;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #228b22; /* Darker green */
+    background-color: #228b22; /* Darker green */
 }
 
 /* Home Section Styles */
 #home {
-  background-color: #e9f5db; /* Light green background */
+    background-color: #e9f5db; /* Light green background */
 }
 
-#home p {
-  text-align: center;
-  font-size: 1.1em;
-  color: #555;
+.home-content {
+    text-align: center;
+}
+
+.home-content p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto 0;
 }
 
 /* Products Section Styles */
 #products {
-  background-color: #fff;
+    background-color: #fff;
+}
+
+.products-content {
+    /* No specific styling needed here yet */
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column;
 }
 
 .card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 1px solid #eee;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio for consistent image proportions */
 }
 
 .card h3 {
-  color: #38761d; /* Green color */
-  margin: 15px;
-  text-align: center;
+    color: #38761d; /* Green color */
+    margin: 15px;
+    text-align: center;
 }
 
 .card p {
-  color: #555;
-  font-size: 0.95em;
-  padding: 0 15px 15px;
-  text-align: center;
+    color: #555;
+    font-size: 0.95em;
+    padding: 0 15px 15px;
+    text-align: center;
+    flex-grow: 1; /* Allow paragraph to take up remaining space */
 }
 
 /* Guidance Section Styles */
 #guidance {
-  background-color: #f0fff0; /* Light green background */
+    background-color: #f0fff0; /* Light green background */
 }
 
-#guidance ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
+.guidance-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-#guidance li {
-  padding: 10px 0;
-  border-bottom: 1px dashed #ccc;
-  color: #444;
+.guidance-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
 
-#guidance li:last-child {
-  border-bottom: none;
+.guidance-content li {
+    padding: 12px 0; /* Slightly increased padding */
+    border-bottom: 1px dashed #ccc;
+    color: #444;
 }
 
-#guidance strong {
-  color: #228b22; /* Darker green */
+.guidance-content li:last-child {
+    border-bottom: none;
+}
+
+.guidance-content strong {
+    color: #228b22; /* Darker green */
 }
 
 /* Team Section Styles */
 #team {
-  background-color: #fff;
+    background-color: #fff;
+}
+
+.team-content {
+    /* No specific styling needed here yet */
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly wider team cards */
+    gap: 25px;
+    margin-top: 20px;
 }
 
 .team-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
 }
 
 .team-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
+    width: 120px; /* Increased width */
+    height: 120px; /* Increased height */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .team-card h3 {
-  color: #38761d; /* Green color */
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 1.2em;
+    color: #38761d; /* Green color */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
 .team-card p {
-  color: #555;
-  font-size: 0.9em;
-  margin-bottom: 0;
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 0;
 }
 
 /* Contact Section Styles */
 #contact {
-  background-color: #e9f5db; /* Light green background */
-  padding-bottom: 60px;
+    background-color: #e9f5db; /* Light green background */
+    padding-bottom: 60px;
 }
 
-#contact form {
-  max-width: 500px;
-  margin: 20px auto 0;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.contact-content {
+    max-width: 550px; /* Slightly wider form */
+    margin: 20px auto 0;
+    padding: 30px; /* Increased padding for the form */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap between form elements */
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+.contact-content input[type="text"],
+.contact-content input[type="email"],
+.contact-content textarea {
+    padding: 12px; /* Increased padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
-#contact textarea {
-  resize: vertical;
+.contact-content textarea {
+    resize: vertical;
 }
 
-#contact button[type="submit"] {
-  background-color: #38761d; /* Green color */
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+.contact-content button[type="submit"] {
+    background-color: #38761d; /* Green color */
+    color: #fff;
+    padding: 14px 22px; /* Increased padding for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font for the button */
+    transition: background-color 0.3s ease;
 }
 
-#contact button[type="submit"]:hover {
-  background-color: #228b22; /* Darker green */
+.contact-content button[type="submit"]:hover {
+    background-color: #228b22; /* Darker green */
+}
+
+#form-response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#form-response.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#form-response.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0; /* Increased padding for the footer */
+    font-size: 0.9em;
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Increased gap in footer */
 }
 
 footer a {
-  color: #fff;
-  text-decoration: underline;
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .nav-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-  }
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-  .product-grid,
-  .team-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+    .product-grid,
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
+    }
 
-  .header-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .logo-container {
-      margin-bottom: 10px;
-  }
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .contact-content {
+        padding: 20px; /* Adjust form padding for smaller screens */
+    }
 }
