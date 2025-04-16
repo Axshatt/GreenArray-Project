@@ -31,8 +31,8 @@
 | Name             | Role                                      |
 |------------------|-------------------------------------------|
 | **Vinayak Pandey** | 🔧 Team Lead & Full Stack Developer        |
-| **Soumya Mishra** | ⚛️ React Integration & UI Improvements    |
-| **Srishti Dwivedi**| 🧩 Hackathon Post & Media Presentation     |
+| **Soumya Mishra** | ⚛️ React and UI Development    |
+| **Srishti Dwivedi**| 🧩 Content And Media     |
 | **Vibhanshu Mishra**| ✅ Front-End Devloper                |
 | **Gagan Yadav** | Backend Support
 
