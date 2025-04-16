@@ -3,60 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GreenArray - Eco-Friendly Gardening Platform</title>
+  <title>GreenArray</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="GreenArray Logo">
+      <h1>GreenArray</h1>
+    </div>
+  </header>
+
   <nav>
-    <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#plants">Plants</a></li>
-      <li><a href="#guidance">Guidance</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#products">Plants</a>
+    <a href="#guidance">Guidance</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Home Section -->
   <section id="home">
-    <h1>Welcome to GreenArray</h1>
-    <p>Your eco-friendly gardening companion.</p>
+    <h2>Welcome to GreenArray</h2>
+    <p>GreenArray is your one-stop solution for indoor/outdoor plants, gardening essentials, seeds, and expert care tips. We believe in creating greener homes and a sustainable future.</p>
   </section>
 
-  <!-- Plants Section -->
-  <section id="plants">
-    <h2>Our Plant Collection</h2>
-    <p>Explore our diverse range of rare and exotic plants.</p>
+  <section id="products">
+    <h2>Top 5 Plants</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="monestra.webp" alt="Monstera">
+        <h3>Monstera</h3>
+        <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
+      </div>
+      <div class="card">
+        <img src="japanesemapple.webp" alt="Japanese Maple">
+        <h3>Japanese Maple</h3>
+        <p>Stunning red foliage. Prefers partial sunlight.</p>
+      </div>
+      <div class="card">
+        <img src="birdofparadise.jpeg" alt="Bird of Paradise">
+        <h3>Bird of Paradise</h3>
+        <p>Bright tropical flower. Needs good sunlight.</p>
+      </div>
+      <div class="card">
+        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig">
+        <h3>Fiddle Leaf Fig</h3>
+        <p>Modern houseplant. Requires weekly watering.</p>
+      </div>
+      <div class="card">
+        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum">
+        <h3>Guiacism</h3>
+        <p>Rare medicinal plant with unique leaf structure.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Guidance Section -->
   <section id="guidance">
-    <h2>Gardening Guidance</h2>
-    <p>Expert tips and techniques for plant care.</p>
+    <h2>Plant Care Guidance</h2>
+    <p>🌿 <strong>Watering</strong>: Check soil before watering. Water once a week.</p>
+    <p>☀️ <strong>Sunlight</strong>: Indoor plants need indirect light. Outdoor plants need full sun.</p>
+    <p>🌱 <strong>Soil</strong>: Use well-draining soil. Choose correct mix.</p>
+    <p>🐛 <strong>Pest Control</strong>: Use neem oil or soap solution for pests.</p>
+    <p>🌼 <strong>Fertilizing</strong>: Apply organic fertilizers in summer, avoid in winter.</p>
+    <p>♻️ <strong>Repotting</strong>: Every 6-12 months with fresh soil.</p>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About GreenArray</h2>
-    <p>Promoting eco-conscious gardening practices.</p>
-  </section>
-
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send</button>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
@@ -64,40 +82,34 @@
   <section id="team">
     <h2>Meet Our Team</h2>
     <div class="team-grid">
-      <div class="team-card" data-name="Vinayak Pandey" data-role="Team Lead & Full Stack Developer" data-image="frontend/birdofparadise.jpeg">
-        <img src="frontend/birdofparadise.jpeg" alt="Vinayak Pandey">
+      <div class="team-card">
+        <img src="team_member1.jpg" alt="Team Member 1" />
         <h3>Vinayak Pandey</h3>
         <p>Team Lead & Full Stack Developer</p>
       </div>
-      <div class="team-card" data-name="Soumya Mishra" data-role="React Integration & UI Improvements" data-image="frontend/fiddleleaf.jpeg">
-        <img src="frontend/fiddleleaf.jpeg" alt="Soumya Mishra">
-        <h3>Soumya Mishra</h3>
-        <p>React Integration & UI Improvements</p>
+      <div class="team-card">
+        <img src="team_member2.jpg" alt="Team Member 2" />
+        <h3>Jane Doe</h3>
+        <p>Lead Designer</p>
       </div>
-      <div class="team-card" data-name="Srishti Dwivedi" data-role="Hackathon Post & Media Presentation" data-image="frontend/japanesemapple.webp">
-        <img src="frontend/japanesemapple.webp" alt="Srishti Dwivedi">
-        <h3>Srishti Dwivedi</h3>
-        <p>Hackathon Post & Media Presentation</p>
+      <div class="team-card">
+        <img src="team_member3.jpg" alt="Team Member 3" />
+        <h3>John Smith</h3>
+        <p>Backend Developer</p>
       </div>
-      <div class="team-card" data-name="Vibhanshu Mishra" data-role="Front-End Developer" data-image="frontend/monestra.webp">
-        <img src="frontend/monestra.webp" alt="Vibhanshu Mishra">
-        <h3>Vibhanshu Mishra</h3>
-        <p>Front-End Developer</p>
+      <div class="team-card">
+        <img src="team_member4.jpg" alt="Team Member 4" />
+        <h3>Emily Johnson</h3>
+        <p>Frontend Developer</p>
       </div>
     </div>
   </section>
 
-  <!-- Team Member Modal -->
-  <div id="teamModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modalImage" src="" alt="Team Member Image">
-      <h3 id="modalName"></h3>
-      <p id="modalRole"></p>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 GreenArray | All Rights Reserved</p>
+    <p>📧 Email: <a href="mailto:greenarray2627@gmail.com">greenarray2627@gmail.com</a></p>
+  </footer>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
