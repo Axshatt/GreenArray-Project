@@ -1,52 +1,73 @@
-// script.js
+// Toggle Navigation Menu on Mobile
+const menuButton = document.getElementById('menuButton');
+const navMenu = document.getElementById('navMenu');
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+menuButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 
-// Basic form submission handling with visual feedback
-const contactForm = document.getElementById('contactForm');
-const formResponseDiv = document.getElementById('form-response');
+// Form Validation
+const form = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
 
-if (contactForm && formResponseDiv) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    let isValid = true;
 
-        // Simulate form submission (replace with actual API call if needed)
-        setTimeout(() => {
-            const isSuccess = Math.random() < 0.8; // Simulate success 80% of the time
+    // Clear previous error messages
+    const errorMessages = document.querySelectorAll('.error-message');
+    errorMessages.forEach(message => message.remove());
 
-            if (isSuccess) {
-                formResponseDiv.textContent = 'Your message has been sent successfully!';
-                formResponseDiv.className = 'success';
-                contactForm.reset();
-            } else {
-                formResponseDiv.textContent = 'Oops! Something went wrong. Please try again later.';
-                formResponseDiv.className = 'error';
-            }
+    // Validate Name
+    if (nameInput.value.trim() === '') {
+        isValid = false;
+        displayError(nameInput, 'Name is required');
+    }
 
-            formResponseDiv.style.display = 'block';
+    // Validate Email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(emailInput.value.trim())) {
+        isValid = false;
+        displayError(emailInput, 'Please enter a valid email');
+    }
 
-            // Hide the response message after a few seconds
-            setTimeout(() => {
-                formResponseDiv.style.display = 'none';
-                formResponseDiv.className = ''; // Reset class
-                formResponseDiv.textContent = ''; // Clear text
-            }, 5000);
-        }, 1000); // Simulate a 1-second delay for submission
-    });
+    // Validate Message
+    if (messageInput.value.trim() === '') {
+        isValid = false;
+        displayError(messageInput, 'Message is required');
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully');
+        form.reset();
+    }
+});
+
+// Display error message
+function displayError(inputElement, message) {
+    const errorMessage = document.createElement('span');
+    errorMessage.classList.add('error-message');
+    errorMessage.textContent = message;
+    inputElement.parentElement.appendChild(errorMessage);
 }
 
-// You can add more JavaScript functionality here, such as:
-// - Image carousels for the products section
-// - Dynamic loading of plant data
-// - Interactive plant care guides
-// - Form validation
-// - More complex UI interactions
+// Scroll to Top Button
+const scrollTopButton = document.getElementById('scrollTopButton');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollTopButton.style.display = 'block';
+    } else {
+        scrollTopButton.style.display = 'none';
+    }
+});
+
+scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
