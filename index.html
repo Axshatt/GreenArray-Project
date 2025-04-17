@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GreenArray</title>
+    <title>GreenArray - Indoor & Outdoor Plants</title>
     <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="GreenArray: Your source for indoor/outdoor plants, gardening essentials, seeds, and expert care tips.">
-    <meta name="keywords" content="plants, gardening, indoor plants, outdoor plants, plant care, seeds">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="GreenArray: Your source for indoor/outdoor plants, gardening essentials, seeds, and expert care tips." />
+    <meta name="keywords" content="plants, gardening, indoor plants, outdoor plants, plant care, seeds" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GreenArray",
+            "url": "https://www.greenarray.com",
+            "logo": "logo.jpg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+911120819413",
+                "contactType": "Customer Service",
+                "areaServed": "IN",
+                "availableLanguage": "English"
+            },
+            "sameAs": [
+                "https://www.facebook.com/GreenArray",
+                "https://twitter.com/GreenArray"
+            ]
+        }
+    </script>
 </head>
+
 <body>
 
     <header>
         <div class="container header-container">
-            <a href="#home" class="logo-container">
-                <img src="logo.jpg" alt="GreenArray Logo">
+            <a href="#home" class="logo-container" aria-label="GreenArray Homepage">
+                <img src="logo.jpg" alt="GreenArray Logo" />
                 <h1>GreenArray</h1>
             </a>
         </div>
@@ -22,15 +45,16 @@
 
     <nav>
         <div class="container nav-container">
-            <a href="#home">Home</a>
-            <a href="#products">Plants</a>
-            <a href="#guidance">Guidance</a>
-            <a href="#team">Team</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" aria-label="Go to Home">Home</a>
+            <a href="#products" aria-label="Browse Plants">Plants</a>
+            <a href="#guidance" aria-label="Plant Care Guidance">Guidance</a>
+            <a href="#team" aria-label="Meet the Team">Team</a>
+            <a href="#contact" aria-label="Contact Us">Contact</a>
         </div>
     </nav>
 
     <main>
+        <!-- Home Section -->
         <section id="home" class="section">
             <div class="container section-container home-content">
                 <h2>Welcome to GreenArray</h2>
@@ -38,55 +62,56 @@
             </div>
         </section>
 
+        <!-- Products Section -->
         <section id="products" class="section">
             <div class="container section-container products-content">
                 <h2>Top 9 Plants</h2>
                 <div class="product-grid">
                     <div class="card">
-                        <img src="birdofparadise.jpeg" alt="Bird of Paradise">
+                        <img src="birdofparadise.jpeg" alt="Bird of Paradise Plant" />
                         <h3>Bird of Paradise</h3>
                         <p>Bright tropical flower. Needs good sunlight.</p>
                     </div>
                     <div class="card">
-                        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig">
+                        <img src="fiddleleaf.jpeg" alt="Fiddle Leaf Fig" />
                         <h3>Fiddle Leaf Fig</h3>
                         <p>Modern houseplant. Requires weekly watering.</p>
                     </div>
                     <div class="card">
-                        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum">
+                        <img src="guaiacum_officinale_flowers_2.jpg" alt="Guaiacum" />
                         <h3>Guaiacum</h3>
                         <p>Rare medicinal plant with unique leaf structure.</p>
                     </div>
                     <div class="card">
-                        <img src="japanesemapple.webp" alt="Japanese Maple">
+                        <img src="japanesemapple.webp" alt="Japanese Maple Tree" />
                         <h3>Japanese Maple</h3>
                         <p>Stunning red foliage. Prefers partial sunlight.</p>
                     </div>
                     <div class="card">
-                        <img src="monestra.webp" alt="Monstera">
+                        <img src="monestra.webp" alt="Monstera" />
                         <h3>Monstera</h3>
                         <p>Air-purifying, beautiful split leaves. Great for indoors.</p>
                     </div>
                     <div class="card">
-                        <img src="potted marigolds.png" alt="Potted Marigolds">
+                        <img src="potted marigolds.png" alt="Potted Marigolds" />
                         <h3>Potted Marigolds</h3>
                         <p>Bright, cheerful flowers known for their golden-orange hues. Great for gardens or balconies.</p>
                     </div>
                     <div class="card">
-                        <img src="Alocasia Amazonica Poly.webp" alt="Alocasia Amazonica Poly">
+                        <img src="Alocasia Amazonica Poly.webp" alt="Alocasia Amazonica Poly" />
                         <h3>Alocasia Amazonica Poly</h3>
                         <p>Striking dark green foliage with silver veins. Prefers humid conditions and filtered light.</p>
                     </div>
                     <div class="card">
-                        <img src="money plant.jpg" alt="Money Plant">
+                        <img src="money plant.jpg" alt="Money Plant" />
                         <h3>Money Plant</h3>
                         <p>Easy to care for and believed to bring luck. Grows well in soil or water indoors.</p>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
+        <!-- Guidance Section -->
         <section id="guidance" class="section">
             <div class="container section-container guidance-content">
                 <h2>Plant Care Guidance</h2>
@@ -103,66 +128,67 @@
             </div>
         </section>
 
-        <section id="team" class="section">
-            <div class="container section-container team-content">
-                <h2>Meet Our Team</h2>
-                <div class="team-grid">
-                    <div class="team-card">
-                        <img src="Vinayak.jpg" alt="Vinayak - Team Lead and Full Stack Developer">
-                        <h3>Vinayak Pandey</h3>
-                        <p>Team Lead and Front Stack Developer</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="Gagan.jpg" alt="Gagan - Team Support">
-                        <h3>Gagan Yadav</h3>
-                        <p>Team Support</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="Vibhanshu.jpg" alt="Vibhanshu - Frontend Developer">
-                        <h3>Vibhanshu Mishra</h3>
-                        <p>Frontend Developer</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="Soumya.jpg" alt="Soumya - UI/UX Designer">
-                        <h3>Soumya Mishra</h3>
-                        <p>UI/UX Designer</p>
-                    </div>
-                    <div class="team-card">
-                        <img src="Srishti.jpg" alt="Srishti - Content Strategist">
-                        <h3>Srishti Dwivedi</h3>
-                        <p>Content Strategist</p>
-                    </div>
-                </div>
+        <!-- Team Section -->
+        <!-- Team Section -->
+<section id="team" class="section">
+    <div class="container section-container team-content">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="Vinayak.jpg" alt="Vinayak - Team Lead and Full Stack Developer" />
+                <h3>Vinayak Pandey</h3>
+                <p>Team Lead, Developer</p>
             </div>
-        </section>
+            <div class="team-card">
+                <img src="Gagan (1) .jpg" alt="Gagan - Team Support" />
+                <h3>Gagan Yadav</h3>
+                <p>Team Coordination</p>
+            </div>
+            <div class="team-card">
+                <img src="Vibhanshu.jpg" alt="Vibhanshu - Frontend Developer" />
+                <h3>Vibhanshu Mishra</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-card">
+                <img src="Soumya.jpg" alt="Soumya - UI/UX Designer" />
+                <h3>Soumya Mishra</h3>
+                <p>UI/UX Design</p>
+            </div>
+            <div class="team-card">
+                <img src="Srishti.jpg" alt="Srishti - Content Strategist" />
+                <h3>Srishti Dwivedi</h3>
+                <p>Content Writing</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container section-container contact-content">
                 <h2>Contact Us</h2>
-                <p class="contact-intro">Have questions, suggestions, or need assistance? Feel free to reach out to us by filling out the form below.</p>
+                <p class="contact-intro">Have questions, suggestions, or need assistance? Reach out to us by filling out the form below.</p>
                 
                 <p><b>Helpline Numbers:</b></p>
                 <p>Forest Department: 91-11 20819413</p>
                 <p>Animal Welfare: 0129-2555700</p>
+                <p><b>Email:</b> <a href="mailto:greenarray2627@gmail.com">greenarray2627@gmail.com</a></p>
 
-                <form id="contactForm">
+                <form id="contactForm" method="post">
                     <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required />
                     </div>
                     <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required />
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject:</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" />
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message..." rows="4" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" placeholder="Enter your message here" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="submit-button">Send</button>
                 </form>
             </div>
         </section>
@@ -172,4 +198,7 @@
         <div class="container footer-container">
             <p>&copy; 2025 GreenArray. All rights reserved.</p>
         </div>
-    <div>
+    </footer>
+
+</body>
+</html>
