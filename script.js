@@ -1,73 +1,85 @@
-// Toggle Navigation Menu on Mobile
-const menuButton = document.getElementById('menuButton');
-const navMenu = document.getElementById('navMenu');
-
-menuButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Form Validation
-const form = document.getElementById('contactForm');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+// Wait for the document to load before executing
+document.addEventListener("DOMContentLoaded", function() {
     
-    let isValid = true;
+    // Contact Form Submission
+    const contactForm = document.querySelector(".contact-content form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent the form from submitting the default way
+            
+            // Collect form data
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
 
-    // Clear previous error messages
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(message => message.remove());
-
-    // Validate Name
-    if (nameInput.value.trim() === '') {
-        isValid = false;
-        displayError(nameInput, 'Name is required');
+            // Show a success message after form submission
+            if (name && email && message) {
+                alert("Thank you for contacting us! We will get back to you shortly.");
+                // Optionally, reset the form fields after submission
+                contactForm.reset();
+            } else {
+                alert("Please fill out all the fields before submitting.");
+            }
+        });
     }
 
-    // Validate Email
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(emailInput.value.trim())) {
-        isValid = false;
-        displayError(emailInput, 'Please enter a valid email');
+    // Product Card Hover Effect (Optional: Add dynamic behavior to cards if needed)
+    const productCards = document.querySelectorAll(".card");
+    productCards.forEach(card => {
+        card.addEventListener("mouseover", function() {
+            card.style.transform = "scale(1.05)"; // Slightly enlarge the card on hover
+        });
+        card.addEventListener("mouseout", function() {
+            card.style.transform = "scale(1)"; // Reset to original size when not hovered
+        });
+    });
+
+    // Smooth Scroll for Navigation (Optional: Enable smooth scrolling)
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1); // Get target ID (remove '#')
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50, // Scroll with an offset for header
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            }
+        });
+    });
+
+    // Toggle Mobile Navigation Menu (for small screens)
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-container");
+
+    if (navToggle) {
+        navToggle.addEventListener("click", function() {
+            navMenu.classList.toggle("active"); // Toggle the visibility of the navigation menu
+        });
     }
 
-    // Validate Message
-    if (messageInput.value.trim() === '') {
-        isValid = false;
-        displayError(messageInput, 'Message is required');
-    }
-
-    if (isValid) {
-        alert('Form submitted successfully');
-        form.reset();
-    }
 });
 
-// Display error message
-function displayError(inputElement, message) {
-    const errorMessage = document.createElement('span');
-    errorMessage.classList.add('error-message');
-    errorMessage.textContent = message;
-    inputElement.parentElement.appendChild(errorMessage);
-}
+// Scroll to Top Button (Optional: For convenience, add a button to scroll back to the top)
+const scrollTopButton = document.createElement("button");
+scrollTopButton.textContent = "↑";
+scrollTopButton.classList.add("scroll-top");
+document.body.appendChild(scrollTopButton);
 
-// Scroll to Top Button
-const scrollTopButton = document.getElementById('scrollTopButton');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollTopButton.style.display = 'block';
-    } else {
-        scrollTopButton.style.display = 'none';
-    }
-});
-
-scrollTopButton.addEventListener('click', () => {
+scrollTopButton.addEventListener("click", function() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth',
+        behavior: 'smooth'
     });
+});
+
+// Show/Hide Scroll Top Button based on scroll position
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 500) {
+        scrollTopButton.style.display = "block";
+    } else {
+        scrollTopButton.style.display = "none";
+    }
 });
