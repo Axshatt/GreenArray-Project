@@ -1,385 +1,269 @@
-/* General Styles */
-body {
-  font-family: sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section-container {
-  padding: 40px 0;
-}
-
-.section {
-  padding: 60px 0; /* Increased padding for sections */
-}
-
-h2 {
-  color: #38761d; /* Green color */
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Header Styles */
+/* Header Styling */
 header {
   background-color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ddd;
 }
 
+/* Align logo to the left */
 .header-container {
   display: flex;
-  justify-content: flex-start; /* Ensure logo is visible */
   align-items: center;
+  justify-content: flex-start; /* Ensures left alignment */
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  text-decoration: none; /* Removes default link styling */
 }
 
 .logo-container img {
-  height: 50px;
-  margin-right: 15px;
-  display: block;
+  width: 40px; /* Adjust logo size as per requirement */
+  margin-right: 10px;
 }
 
-.logo-container h1 {
-  color: #38761d; /* Green color */
-  margin: 0;
+h1 {
+  font-size: 24px;
+  color: #333;
 }
 
-/* Navigation Styles */
+/* Navigation Styling */
 nav {
-  background-color: #38761d; /* Green color */
-  color: #fff;
-  padding: 15px 0;
+  background-color: #333;
 }
 
 .nav-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  padding: 10px 0;
 }
 
-nav a {
-  color: #fff;
+.nav-container a {
+  color: white;
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  background-color: #228b22; /* Darker green */
+.nav-container a:hover {
+  color: #4CAF50;
 }
 
-/* Home Section Styles */
-#home {
-  background-color: #e9f5db; /* Light green background */
+/* Main Section Styling */
+main {
+  margin: 20px 0;
 }
 
-.home-content {
+.section {
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Home Section */
+.home-intro {
+  font-size: 18px;
+  color: #555;
   text-align: center;
 }
 
-.home-intro {
-  font-size: 1.1em;
-  color: #555;
-  max-width: 800px;
-  margin: 20px auto 0;
-}
-
-/* Products Section Styles */
-#products {
-  background-color: #fff;
-}
-
-.products-content {
-  /* No specific styling needed here yet */
-}
-
+/* Product Grid Section */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider cards */
-  gap: 30px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex; /* Use flexbox for content alignment */
-  flex-direction: column;
+  padding: 20px;
+  text-align: center;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  display: block;
-  border-bottom: 1px solid #eee;
-  object-fit: cover;
-  aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio for consistent image proportions */
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .card h3 {
-  color: #38761d; /* Green color */
-  margin: 15px;
-  text-align: center;
-  white-space: nowrap; /* Prevent plant name wrapping */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for long names */
+  font-size: 22px;
+  color: #333;
 }
 
 .card p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Guidance Section */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
   color: #555;
-  font-size: 0.95em;
-  padding: 0 15px 15px;
-  text-align: center;
-  flex-grow: 1; /* Allow paragraph to take up remaining space */
 }
 
-/* Guidance Section Styles */
-#guidance {
-  background-color: #f0fff0; /* Light green background */
+ul li strong {
+  color: #333;
 }
 
-.guidance-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.guidance-content ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.guidance-content li {
-  padding: 12px 0; /* Slightly increased padding */
-  border-bottom: 1px dashed #ccc;
-  color: #444;
-}
-
-.guidance-content li:last-child {
-  border-bottom: none;
-}
-
-.guidance-content strong {
-  color: #228b22; /* Darker green */
-}
-
-/* Team Section Styles */
-#team {
-  background-color: #fff;
-}
-
-.team-content {
-  /* No specific styling needed here yet */
-}
-
+/* Team Section */
 .team-grid {
-  display: flex; /* Change to flexbox */
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
-  gap: 20px; /* Adjust the gap as needed */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   margin-top: 20px;
 }
 
 .team-card {
-  background-color: #f9f9f9;
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
   padding: 20px;
-  flex: 0 0 auto; /* Don't grow or shrink, base width auto */
-  width: 200px; /* Adjust the base width as needed */
+  text-align: center;
+  border-radius: 8px;
 }
 
 .team-card img {
-  width: 100px; /* Adjust image size as needed */
-  height: 100px; /* Adjust image size as needed */
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 10px;
 }
 
 .team-card h3 {
-  color: #38761d; /* Green color */
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 1.2em;
-  white-space: nowrap; /* Prevent name from wrapping */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for long names */
+  font-size: 22px;
+  color: #333;
 }
 
 .team-card p {
-  color: #555;
-  font-size: 0.9em;
-  margin-bottom: 0;
-  white-space: nowrap; /* Prevent role from wrapping */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for long roles */
+  font-size: 16px;
+  color: #777;
 }
 
-/* Contact Section Styles */
-#contact {
-  background-color: #e9f5db; /* Light green background */
-  padding-bottom: 70px; /* Slightly more bottom padding */
-}
-
-.contact-content {
-  max-width: 600px; /* Slightly wider form container */
-  margin: 30px auto 0; /* More top margin */
-  padding: 35px; /* Increased padding */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
-  display: flex;
-  flex-direction: column;
-  gap: 25px; /* Increased gap between form groups */
-}
-
+/* Contact Section */
 .contact-intro {
+  font-size: 18px;
   color: #555;
-  text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
-.form-group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #444;
+label {
+  font-size: 16px;
+  color: #333;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="text"][id="subject"], /* Specificity for subject input */
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.form-group textarea {
-  resize: vertical;
-}
-
-.submit-button {
-  background-color: #38761d; /* Green color */
-  color: #fff;
-  padding: 14px 22px;
+button.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1em;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  width: 100%;
 }
 
-.submit-button:hover {
-  background-color: #228b22; /* Darker green */
+button.submit-button:hover {
+  background-color: #45a049;
 }
 
-#form-response {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#form-response.success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-#form-response.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Footer Styles */
+/* Footer Styling */
 footer {
   background-color: #333;
-  color: #fff;
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  padding: 25px 0; /* Increased padding for the footer */
-  font-size: 0.9em;
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px; /* Increased gap in footer */
+footer p {
+  font-size: 16px;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Responsive Design */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .nav-container {
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+  }
+
+  .nav-container a {
+      margin: 10px 0;
   }
 
   .product-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width for smaller screens */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
   .team-grid {
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
-      overflow-x: auto; /* Still keep horizontal scroll if needed */
-      justify-content: center; /* Center team cards on smaller screens */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
-  .team-card {
-      width: calc(50% - 10px); /* Two cards per row on smaller screens */
-      margin-bottom: 15px;
+  .section-container {
+      padding: 0 20px;
   }
 
-  .header-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+  .card h3,
+  .card p {
+      font-size: 18px;
   }
 
-  .logo-container {
-      margin-bottom: 10px;
-  }
-
-  .contact-content {
-      padding: 20px; /* Adjust form padding for smaller screens */
-  }
-}
-
-@media (max-width: 500px) {
-  .team-card {
-      width: 100%; /* One card per row on even smaller screens */
+  .team-card h3,
+  .team-card p {
+      font-size: 18px;
   }
 }
