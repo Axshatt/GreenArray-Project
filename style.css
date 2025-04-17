@@ -1,269 +1,269 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header Styling */
 header {
-  background-color: #fff;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Align logo to the left */
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Ensures left alignment */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensures left alignment */
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  text-decoration: none; /* Removes default link styling */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Removes default link styling */
 }
 
 .logo-container img {
-  width: 40px; /* Adjust logo size as per requirement */
-  margin-right: 10px;
+    width: 40px; /* Adjust logo size as per requirement */
+    margin-right: 10px;
 }
 
 h1 {
-  font-size: 24px;
-  color: #333;
+    font-size: 24px;
+    color: #333;
 }
 
 /* Navigation Styling */
 nav {
-  background-color: #333;
+    background-color: #333;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .nav-container a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 18px;
-  transition: color 0.3s;
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .nav-container a:hover {
-  color: #4CAF50;
+    color: #4CAF50;
 }
 
 /* Main Section Styling */
 main {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .section {
-  padding: 40px 20px;
-  margin-bottom: 20px;
+    padding: 40px 20px;
+    margin-bottom: 20px;
 }
 
 .section-container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 /* Home Section */
 .home-intro {
-  font-size: 18px;
-  color: #555;
-  text-align: center;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
 }
 
 /* Product Grid Section */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
 }
 
 .card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
-  font-size: 22px;
-  color: #333;
+    font-size: 22px;
+    color: #333;
 }
 
 .card p {
-  font-size: 16px;
-  color: #777;
+    font-size: 16px;
+    color: #777;
 }
 
 /* Guidance Section */
 ul {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 ul li {
-  margin-bottom: 15px;
-  font-size: 18px;
-  color: #555;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
 }
 
 ul li strong {
-  color: #333;
+    color: #333;
 }
 
 /* Team Section */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .team-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .team-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .team-card h3 {
-  font-size: 22px;
-  color: #333;
+    font-size: 22px;
+    color: #333;
 }
 
 .team-card p {
-  font-size: 16px;
-  color: #777;
+    font-size: 16px;
+    color: #777;
 }
 
 /* Contact Section */
 .contact-intro {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 label {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 button.submit-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
 }
 
 button.submit-button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* Footer Styling */
 footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 footer p {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .nav-container {
-      flex-direction: column;
-      align-items: center;
-  }
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .nav-container a {
-      margin: 10px 0;
-  }
+    .nav-container a {
+        margin: 10px 0;
+    }
 
-  .product-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 
-  .team-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 
-  .section-container {
-      padding: 0 20px;
-  }
+    .section-container {
+        padding: 0 20px;
+    }
 
-  .card h3,
-  .card p {
-      font-size: 18px;
-  }
+    .card h3,
+    .card p {
+        font-size: 18px;
+    }
 
-  .team-card h3,
-  .team-card p {
-      font-size: 18px;
-  }
+    .team-card h3,
+    .team-card p {
+        font-size: 18px;
+    }
 }
