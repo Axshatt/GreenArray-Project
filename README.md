@@ -30,11 +30,11 @@
 
 | Name             | Role                                      |
 |------------------|-------------------------------------------|
-| **Vinayak Pandey** | 🔧 Team Lead & Full Stack Developer        |
-| **Soumya Mishra** | ⚛️ React and UI Development    |
-| **Srishti Dwivedi**| 🧩 Content And Media     |
+| **Vinayak Pandey** | 🔧 Team Lead ,Developer        |
+| **Soumya Mishra** | ⚛️  UI And UX Design    |
+| **Srishti Dwivedi**| 🧩 Content Writing     |
 | **Vibhanshu Mishra**| ✅ Front-End Devloper                |
-| **Gagan Yadav** | Backend Support
+| **Gagan Yadav** | Team Coordination
 
 ---
 
