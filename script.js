@@ -1,4 +1,3 @@
-// Wait for the document to load before executing
 document.addEventListener("DOMContentLoaded", function() {
     
     // Contact Form Submission
@@ -11,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
             const name = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
             const message = document.querySelector('textarea[name="message"]').value;
+            
+            // Email validation (basic)
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
 
             // Show a success message after form submission
             if (name && email && message) {
