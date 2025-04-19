@@ -134,8 +134,8 @@ nav a:hover {
 .team-card img {
   width: 100px;
   height: 100px;
-  object-fit: cover;
-  object-position: top; /* Ensures head is visible */
+  object-fit: contain;
+  object-position: center;
   border-radius: 50%;
 }
 
