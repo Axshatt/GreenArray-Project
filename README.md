@@ -31,8 +31,7 @@
 | Name               | Role                                      |
 |--------------------|-------------------------------------------|
 | **Vinayak Pandey** | 🔧 Team Lead & Developer        |
-| **Soumya Mishra**  | ⚛️ UI/UX Design
-| **Srishti Dwivedi**| 🧩 Content Writing|
+| **Gagan Yadav**| Team Coordinate
 | **Vibhanshu Mishra**| ✅Froont-end Developer           |
 
 ---
