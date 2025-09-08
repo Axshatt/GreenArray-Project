@@ -4,6 +4,10 @@ import { LineFollow } from "@/components/LinePath";
 import TypographyH1 from "@/components/topography/Header";
 import { CustomCarousel } from "@/components/corousal";
 import { CustomCarouselLanding } from "@/components/landing_corousal";
+import PlantCareList from "@/components/PlantCareList";
+import MeetOurTeam from "@/components/Team";
+import ContactUs from "@/components/ContactUs.tsx";
+
 
 export default function Page() {
   return (
@@ -32,6 +36,13 @@ export default function Page() {
         <div className="w-full lg:w-1/2">
           <TypographyH1 />
         </div>
+      </div>
+      <div className="p-7">
+        <PlantCareList></PlantCareList>
+      </div>
+      
+      <div>
+        <ContactUs/>
       </div>
     </div>
   );

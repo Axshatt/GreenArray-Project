@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@workspace/ui/components/navigation-menu"
+import { ModeToggle } from "@/components/ToggleTheme";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -69,6 +70,9 @@ export default function Navigation() {
             </NavigationMenuLink>
     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/docs">Contact</Link>
+            </NavigationMenuLink>
+    <NavigationMenuLink>
+           <ModeToggle/>
             </NavigationMenuLink>
   </NavigationMenu>
   )

@@ -12,9 +12,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-menubar": "^1.1.16",
     "@radix-ui/react-navigation-menu": "^1.2.14",
     "@radix-ui/react-slot": "^1.2.3",
+    "@types/nodemailer": "^7.0.1",
     "@workspace/ui": "workspace:*",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
@@ -23,6 +26,7 @@
     "lucide-react": "^0.475.0",
     "next": "^15.4.5",
     "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "swiper": "^11.2.10"
