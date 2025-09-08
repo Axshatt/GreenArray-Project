@@ -114,52 +114,52 @@ const CrowdCanvas = ({ src, rows = 15, cols = 7 }: CrowdCanvasProps) => {
     };
 
     // FACTORY FUNCTIONS
-    const createPeep = ({
-      image,
-      rect,
-    }: {
-      image: HTMLImageElement;
-      rect: number[];
-    }): Peep => {
-      const peep: Peep = {
-        image,
-        rect: [],
-        width: 0,
-        height: 0,
-        drawArgs: [],
-        x: 0,
-        y: 0,
-        anchorY: 0,
-        scaleX: 1,
-        walk: null,
-        setRect: (rect: number[]) => {
-          peep.rect = rect;
-          peep.width = rect[2];
-          peep.height = rect[3];
-          peep.drawArgs = [peep.image, ...rect, 0, 0, peep.width, peep.height];
-        },
-        render: (ctx: CanvasRenderingContext2D) => {
-          ctx.save();
-          ctx.translate(peep.x, peep.y);
-          ctx.scale(peep.scaleX, 1);
-          ctx.drawImage(
-            peep.image,
-            peep.rect[0],
-            peep.rect[1],
-            peep.rect[2],
-            peep.rect[3],
-            0,
-            0,
-            peep.width,
-            peep.height,
-          );
-          ctx.restore();
-        },
-      };
+   const createPeep = ({
+  image,
+  rect,
+}: {
+  image: HTMLImageElement;
+  rect: [number, number, number, number];
+}): Peep => {
+  const peep: Peep = {
+    image,
+    rect,
+    width: rect[2],
+    height: rect[3],
+    drawArgs: [image, ...rect, 0, 0, rect[2], rect[3]],
+    x: 0,
+    y: 0,
+    anchorY: 0,
+    scaleX: 1,
+    walk: null,
+    setRect: (newRect: number[]) => {
+      peep.rect = newRect;
+      peep.width = newRect[2]!;
+      peep.height = newRect[3]!;
+      peep.drawArgs = [peep.image, ...newRect, 0, 0, peep.width, peep.height];
+    },
+    render: (ctx: CanvasRenderingContext2D) => {
+      ctx.save();
+      ctx.translate(peep.x, peep.y);
+      ctx.scale(peep.scaleX, 1);
+      ctx.drawImage(
+        peep.image,
+        peep.rect[0]!,
+        peep.rect[1]!,
+        peep.rect[2]!,
+        peep.rect[3]!,
+        0,
+        0,
+        peep.width,
+        peep.height
+      );
+      ctx.restore();
+    },
+  };
 
-      peep.setRect(rect);
-      return peep;
-    };
+  return peep;
+};
+
 
     // MAIN
     const img = document.createElement("img");
